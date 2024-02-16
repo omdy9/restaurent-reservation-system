@@ -1,84 +1,160 @@
 <!DOCTYPE html>
-<html>
-    <head> 
-        <link rel="stylesheet" href="style.css" type="css">
-        <style>
-            h1 { justify-content: center;
-                color: beige;
-                font-style: italic;
-                font-display: block;
-                text-align: center;
-                block-size: auto;
-                border: 1px solid black;
-                font-size: 100px; 
-                text-shadow: -1px 1px 0 #000, 
-                            1px 1px 0 #000, 
-                             1px -1px 0 #000, 
-                            -1px -1px 0 #000;
-            }
-            body { background-image: url(food.jpg);
-                background-repeat: no-repeat;
-                background-size: cover;
-                backdrop-filter: blur(9px); 
-                padding-inline: 10px;
-                padding-block-end: 100px;
-            }
-            .a { background-image: url(login.jpg); 
-                background-repeat: no-repeat;
-                background-size: cover;
-                width:20px;
-                height: 20px;
-            }
-            .center {
-  margin: auto;
-  width: 60%;
-  padding-top: 1%;
-  padding-left: 40%;
-  block-size: 20%;
-  background-blend-mode: multiply;
-}
-.contact{
-    align-content: flex-end;
-    display: inline-block;
-    width: 55%;
-    height: 100px;
-    border-radius: 5px;
-    background-color:;
-    text-decoration-style: none;
-    backdrop-filter: blur(10px), brightness(-10%);
-    padding-left:600px;
-    padding-bottom: -1000px;
-    position: absolute; 
-    bottom: 0; 
-    left: 0; 
-    z-index: 10;
-}
-.nav {
-  background-color: yellow; 
-  list-style-type: none;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
-.nav li {
-  display: inline-block;
-  font-size: 20px;
-  padding: 20px;
-}
-#footer {
-  background-color:indianred;
-  display:table-row ;
-  width: 55%;
-  height: 18%;
-  border: 1px solid black ;
-  padding: auto;
-}
-
-</style>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sliding Homepage</title>
+  <link rel="stylesheet" href="style2.css">
 </head>
-    <body>
-        <h1><a href="new.html" class="hii" style="text-decoration: aliceblue;">Restaurent Reservation System</a></h1>
-        <p>
-    </body>
+<body>
+  <div id="navbar">
+    <a class="active" href="javascript:void(0)"onclick="document.location='#section1'">Home</a>
+    <a href="javascript:void(0)" onclick="document.location='#section2'">menu</a>
+    <a href="javascript:void(0)" onclick="document.location='#section3'">Order</a>
+    <a href="javascript:void(0)" onclick="document.location='#section4'">about Us</a>
+  </div>
+  
+  <div class="content" id="section1" >
+    <h3>Restaurant reservation system</h3>
+    <p>The navbar will stick to the top when you reach its scroll position.</p>
+  </div>
+  <div class="active" id="section2">
+    <h1 style="padding-left: 625px;padding-top: 100px;">menu</h1>
+    <div class="tab">
+      <button class="tablinks" onclick="openCity(event, 'soups')" id="defaultOpen">Soups</button>
+      <button class="tablinks" onclick="openCity(event, 'starters')">starters</button>
+      <button class="tablinks" onclick="openCity(event, 'main course gravy')">main course gravy</button>
+      <button class="tablinks" onclick="openCity(event, 'main course rice/biryani')">main course rice/biryani</button>
+      <button class="tablinks" onclick="openCity(event, 'sides')">sides</button>
+      <button class="tablinks" onclick="openCity(event, 'beverages')">beverages</button>
+    </div>
+    
+    <div id="soups" class="tabcontent">
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="redS.jpg">
+            <img src="redS.jpg" alt="Tomato soup" width="95" height="95">
+          </a>
+          <div class="desc">Tomato soup</div>
+        </div>
+      </div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="wS.jpg">
+            <img src="wS.jpg" alt="Sweet corn soup" width="95" height="95">
+          </a>
+          <div class="desc">Sweet corn soup</div>
+        </div>
+      </div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="mS.jpg">
+            <img src="mS.jpg" alt="Manchow soup" width="95" height="95">
+          </a>
+          <div class="desc">Manchow soup</div>
+        </div>
+      </div>
+    </div>
+   
+    <div id="starters" class="tabcontent">
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="PT.jpg">
+            <img src="PT.jpg" alt="paneer tikka" style=width:100px;height:125px;>
+          </a>
+          <div class="desc" id="fmenu">Paneer Tikka</div>
+        </div>
+      </div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="PC.jpg">
+            <img src="PC.jpg" alt="paneer tikka" style=width:100px;height:125px;>
+          </a>
+          <div class="desc" id="fmenu">Paneer Crispy</div>
+        </div>
+      </div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="P6.jpg">
+            <img src="P6.jpg" alt="paneer 65" style=width:100px;height:125px;>
+          </a>
+          <div class="desc"id="fmenu">Paneer 65</div>
+        </div>
+      </div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="Pk.jpg">
+            <img src="Pk.jpg" alt="paneer Koliwada" style=width:100px;height:125px;>
+          </a>
+          <div class="desc"id="fmenu">Paneer Koliwada</div>
+        </div>
+      </div>
+        <div class="responsive">
+          <div class="gallery">
+            <a target="_blank" href="hk.jpg">
+              <img src="hk.jpg" alt="Hara Bhara Kabab" style=width:100px;height:125px;>
+            </a>
+            <div class="desc"id="fmenu">Hara Bhara Kabab</div>
+          </div>
+        </div>
+        <div class="responsive">
+          <div class="gallery">
+            <a target="_blank" href="vk.jpg">
+              <img src="vk.jpg" alt="Veg seekh kabab" style=width:100px;height:125px;>
+            </a>
+            <div class="desc"id="fmenu">Veg Seekh Kabab</div>
+          </div>
+        </div>
+    </div>
+    <div id="main course" class="tabcontent">
+      <h3>Tokyo</h3>
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
+    
+    <div id="sides" class="tabcontent">
+      <h3>Delhi</h3>
+      <p>Delhi is the capital city of India.</p>
+    </div>
+
+    <div id="beverages" class="tabcontent">
+      <h3>Mumbai</h3>
+      <p>Mumbai is the capital city of India.</p>
+    </div>
+  </div>
+  <div class="active" id="section3">
+    <h1>Order</h1>
+  </div>
+  <div class="active" id="section4">
+    <h1>about us</h1>
+</body>
+<script>
+  window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
 </html>
