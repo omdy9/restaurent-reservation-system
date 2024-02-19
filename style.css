@@ -9,7 +9,7 @@
 }
  
 body {
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -32,7 +32,7 @@ header {
 }
  
 .heading {
-    color: rgb(255, 193, 143);
+    color: #ffc18f;
 }
  
 .title {
