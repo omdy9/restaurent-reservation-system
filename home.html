@@ -1,23 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sliding Homepage</title>
-  <link rel="stylesheet" href="style2.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Homepage</title>
+    <link rel="stylesheet" href="style2.css">
 </head>
 <body>
-  <div id="navbar">
-    <a class="active" href="javascript:void(0)"onclick="document.location='#section1'">Home</a>
-    <a href="javascript:void(0)" onclick="document.location='#section2'">menu</a>
-    <a href="javascript:void(0)" onclick="document.location='#section3'">Order</a>
-    <a href="javascript:void(0)" onclick="document.location='#section4'">about Us</a>
-  </div>
-  
-  <div class="content" id="section1" >
-    <h3>Restaurant reservation system</h3>
-    <p>The navbar will stick to the top when you reach its scroll position.</p>
-  </div>
+    <div id="navbar">
+        <a class="active" href="javascript:void(0)" onclick="document.location='#section1'">Home</a>
+        <a href="javascript:void(0)" onclick="document.location='#section2'">menu</a>
+        <a href="javascript:void(0)" onclick="document.location='#section5'">Order</a>
+        <a href="javascript:void(0)" onclick="document.location='#section4'">about Us</a>
+    </div>
+    
+    <div class="content" id="section1">
+        <h3 style="font-style: italic;">Restaurant reservation system</h3>
+        <div class="slideshow-container">
+
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="img_nature_wide.jpg" style="width:100%">
+            <div class="text">1</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="img_snow_wide.jpg" style="width:100%">
+            <div class="text">2</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="img_mountains_wide.jpg" style="width:100%">
+            <div class="text">3</div>
+          </div>
+          
+          </div>
+          <br>
+          
+          <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+          </div>
+    </div>
   <div class="active" id="section2">
     <h1 style="padding-left: 625px;padding-top: 100px;">menu</h1>
     <div class="tab">
@@ -26,277 +53,498 @@
       <button class="tablinks" onclick="openCity(event, 'main course gravy')">main course gravy</button>
       <button class="tablinks" onclick="openCity(event, 'main course rice')">main course rice/biryani</button>
       <button class="tablinks" onclick="openCity(event, 'sides')">sides</button>
-      <button class="tablinks" onclick="openCity(event, 'beverages')">beverages</button>
     </div>
     
-    <div id="soups" class="tabcontent">
+    <div id="soups" class="tabcontent" style="height: 409px;">
       <div class="responsive">
+        <div class="card">
         <div class="gallery">
-          <a target="_blank" href="redS.jpg">
-            <img src="redS.jpg" alt="Tomato soup" width="95" height="95">
-          </a>
           <div class="desc">Tomato soup</div>
+          <div class="product">
+            <div class="image-container">
+              <img src="redS.jpg" alt="Product Image" class="product-image" style=width:100px;height:125px;>
+            </div>
+          </div>
+          <p class="price">$19.99</p>
         </div>
       </div>
+    </div>
+
       <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="wS.jpg">
-            <img src="wS.jpg" alt="Sweet corn soup" width="95" height="95">
-          </a>
           <div class="desc">Sweet corn soup</div>
+          <div class="product">
+            <div class="image-container">
+              <img src="wS.jpg" alt="Product Image" class="product-image" style=width:100px;height:125px;>
+            </div>
+          </div>
+          <p class="price">$19.99</p>
         </div>
       </div>
+
       <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="mS.jpg">
-            <img src="mS.jpg" alt="Manchow soup" width="95" height="95">
-          </a>
           <div class="desc">Manchow soup</div>
+          <div class="product">
+            <div class="image-container">
+              <img src="mS.jpg" alt="Product Image" class="product-image" style=width:100px;height:125px;>
+            </div>
+          </div>
+          <p class="price">$19.99</p>
         </div>
       </div>
     </div>
    
-    <div id="starters" class="tabcontent">
+    <div id="starters" class="tabcontent" style="height: 409px;">
       <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="PT.jpg">
-            <img src="PT.jpg" alt="paneer tikka" style=width:100px;height:125px;>
-          </a>
           <div class="desc" id="fmenu">Paneer Tikka</div>
+          <div class="product">
+            <div class="image-container">
+              <img src="PT.jpg" alt="Product Image" class="product-image" style=width:100px;height:125px;>
+            </div>
+            <p class="price">$19.99</p>
+          </div>          
         </div>
       </div>
+
       <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="PC.jpg">
-            <img src="PC.jpg" alt="paneer tikka" style=width:100px;height:125px;>
-          </a>
           <div class="desc" id="fmenu">Paneer Crispy</div>
+          <div class="product">
+            <div class="image-container">
+              <img src="PC.jpg" alt="Product Image" class="product-image" style=width:100px;height:125px;>
+            </div>
+            <p class="price">$19.99</p>
+          </div>          
         </div>
       </div>
+
       <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="P6.jpg">
-            <img src="P6.jpg" alt="paneer 65" style=width:100px;height:125px;>
-          </a>
           <div class="desc"id="fmenu">Paneer 65</div>
+          <div class="product">
+            <div class="image-container">
+              <img src="P6.jpg" alt="Product Image" class="product-image" style=width:100px;height:125px;>
+            </div>
+            <p class="price">$19.99</p>
+          </div>          
         </div>
       </div>
+
       <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="Pk.jpg">
-            <img src="Pk.jpg" alt="paneer Koliwada" style=width:100px;height:125px;>
-          </a>
           <div class="desc"id="fmenu">Paneer Koliwada</div>
+          <div class="product">
+            <div class="image-container">
+              <img src="Pk.jpg" alt="Product Image" class="product-image" style=width:100px;height:125px;>
+            </div>
+            <p class="price">$19.99</p>
+          </div>          
         </div>
       </div>
+
         <div class="responsive">
           <div class="gallery">
-            <a target="_blank" href="hk.jpg">
-              <img src="hk.jpg" alt="Hara Bhara Kabab" style=width:100px;height:125px;>
-            </a>
             <div class="desc"id="fmenu">Hara Bhara Kabab</div>
+            <div class="product">
+              <div class="image-container">
+                <img src="hb.jpg" alt="Product Image" class="product-image" style=width:100px;height:125px;>
+              </div>
+              <p class="price">$19.99</p>
+            </div>
           </div>
         </div>
+
         <div class="responsive">
           <div class="gallery">
-            <a target="_blank" href="vk.jpg">
-              <img src="vk.jpg" alt="Veg seekh kabab" style=width:100px;height:125px;>
-            </a>
             <div class="desc"id="fmenu">Veg Seekh Kabab</div>
+            <div class="product">
+              <div class="image-container">
+                <img src="vk.jpg" alt="Product Image" class="product-image" style=width:100px;height:125px;>
+              </div>
+              <p class="price">$19.99</p>
+            </div>    
           </div>
         </div>
     </div>
 
-    <div id="main course gravy" class="tabcontent">
+    <div id="main course gravy" class="tabcontent" style="height: 409px;">
       <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="pb.jpg">
-            <img src="pb.jpg" alt="Pav Bhaji" style=width:100px;height:125px;>
-          </a>
           <div class="desc"id="fmenu">Pav Bhaji</div>
+          <div class="product">
+            <div class="image-container">
+              <img src="pb.jpg" alt="Product Image" class="product-image" style=width:100px;height:125px;>
+            </div>
+            <p class="price">$19.99</p>
+          </div>          
         </div>
+
       </div> <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="ptm.jpg">
-            <img src="ptm.jpg" alt="Paneer Tikka masala" style=width:100px;height:125px;>
-          </a>
           <div class="desc"id="fmenu">Paneer Tikka masala</div>
+          <div class="product">
+            <div class="image-container">
+              <img src="ptm.jpg" alt="Product Image" class="product-image" style=width:100px;height:125px;>
+            </div>
+            <p class="price">$19.99</p>
+          </div>          
         </div>
+
       </div> <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="kp.jpg">
-            <img src="kp.jpg" alt="Kadhai Paneer" style=width:100px;height:125px;>
-          </a>
           <div class="desc"id="fmenu">Kadhai Paneer</div>
+          <div class="product">
+            <div class="image-container">
+              <img src="kp.jpg" alt="Product Image" class="product-image" style=width:100px;height:125px;>
+            </div>
+            <p class="price">$19.99</p>
+          </div>          
         </div>
+
       </div> <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="pl.jpg">
-            <img src="pl.jpg" alt="Paneer Lababdaar" style=width:100px;height:125px;>
-          </a>
           <div class="desc"id="fmenu">Paneer Lababdaar</div>
+          <div class="product">
+            <div class="image-container">
+              <img src="pl.jpg" alt="Product Image" class="product-image" style=width:100px;height:125px;>
+            </div>
+            <p class="price">$19.99</p>
+          </div>          
         </div>
+
       </div> <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="mk.jpg">
-            <img src="mk.jpg" alt="Malai Kofta" style=width:100px;height:125px;>
-          </a>
           <div class="desc"id="fmenu">Malai Kofta</div>
+          <div class="product">
+            <div class="image-container">
+              <img src="mk.jpg" alt="Product Image" class="product-image" style=width:100px;height:125px;>
+            </div>
+            <p class="price">$19.99</p>
+          </div>          
         </div>
+
       </div> <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="cb.jpg">
-            <img src="cb.jpg" alt="Chole Bhature" style=width:100px;height:125px;>
-          </a>
           <div class="desc"id="fmenu">Chole Bhature</div>
+          <div class="product">
+            <div class="image-container">
+              <img src="ptm.jpg" alt="Product Image" class="product-image" style=width:100px;height:125px;>
+            </div>
+            <p class="price">$19.99</p>
+          </div>
         </div>
+
       </div> <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="mm.jpg">
-            <img src="mm.jpg" alt="Mushroom masala" style=width:100px;height:125px;>
-          </a>
           <div class="desc"id="fmenu">Mushroom masala</div>
+          <div class="product">
+            <div class="image-container">
+              <img src="ptm.jpg" alt="Product Image" class="product-image" style=width:100px;height:125px;>
+            </div>
+            <p class="price">$19.99</p>
+          </div>          
         </div>
+
       </div> <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="vh.jpg">
-            <img src="vh.jpg" alt="Veg Handi" style=width:100px;height:125px;>
-          </a>
           <div class="desc"id="fmenu">Veg Handi</div>
+          <div class="product">
+            <div class="image-container">
+              <img src="vh.jpg" alt="Product Image" class="product-image" style=width:100px;height:125px;>
+            </div>
+          </div>   
+          <p class="price">$19.99</p>       
         </div>
       </div>
     </div>
     
-    <div id="main course rice" class="tabcontent">
+    <div id="main course rice" class="tabcontent" style="height: 409px;">
       <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="dr.jpg">
-            <img src="dr.jpg" alt="Dal rice" style=width:100px;height:125px;>
-          </a>
           <div class="desc"id="fmenu">Dal rice</div>
+          <div class="product">
+            <div class="image-container">
+              <img src="dr.jpg" alt="Product Image" class="product-image" style=width:100px;height:125px;>
+            </div>
+            <p class="price">$19.99</p>
+          </div>          
         </div>
+
       </div> <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="pbr.jpg">
-            <img src="pbr.jpg" alt="Paneer Biryani" style=width:100px;height:125px;>
-          </a>
           <div class="desc"id="fmenu">Paneer Biryani</div>
+          <div class="product">
+            <div class="image-container">
+              <img src="pbr.jpg" alt="Product Image" class="product-image" style=width:100px;height:125px;>
+            </div>
+            <p class="price">$19.99</p>
+          </div>          
         </div>
+
       </div> <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="hb.jpg">
-            <img src="hb.jpg" alt="Veg Hydrabadi Biryani" style=width:100px;height:125px;>
-          </a>
           <div class="desc"id="fmenu">Veg Hydrabadi Biryani</div>
+          <div class="product">
+            <div class="image-container">
+              <img src="hb.jpg" alt="Product Image" class="product-image" style=width:100px;height:125px;>
+            </div>
+            <p class="price">$19.99</p>
+          </div>          
         </div>
+
       </div> <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="fr.jpg">
-            <img src="fr.jpg" alt="Veg Fried rice" style=width:100px;height:125px;>
-          </a>
           <div class="desc"id="fmenu">Veg Fried rice</div>
+          <div class="product">
+            <div class="image-container">
+              <img src="fr.jpg" alt="Product Image" class="product-image" style=width:100px;height:125px;>
+            </div>
+            <p class="price">$19.99</p>
+          </div>          
         </div>
+
       </div> <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="sfr.jpg">
-            <img src="sfr.jpg" alt="Schezwan Fried Rice" style=width:100px;height:125px;>
-          </a>
           <div class="desc"id="fmenu">Schezwan Fried Rice</div>
+          <div class="product">
+            <div class="image-container">
+              <img src="sfr.jpg" alt="Product Image" class="product-image" style=width:100px;height:125px;>
+            </div>
+            <p class="price">$19.99</p>
+          </div>          
         </div>
+
       </div> <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="tsfr.jpg">
-            <img src="tsfr.jpg" alt="Triple Schezwan Fried Rice" style=width:100px;height:125px;>
-          </a>
           <div class="desc"id="fmenu">Triple Schezwan Fried Rice</div>
+          <div class="product">
+            <div class="image-container">
+              <img src="tsfr.jpg" alt="Product Image" class="product-image" style=width:100px;height:125px;>
+            </div>
+            <p class="price">$19.99</p>
+          </div>          
         </div>
+
       </div> <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="hn.jpg">
-            <img src="hn.jpg" alt="Hakka Noodles" style=width:100px;height:125px;>
-          </a>
           <div class="desc"id="fmenu">Hakka Noodles</div>
+          <div class="product">
+            <div class="image-container">
+              <img src="hk.jpg" alt="Product Image" class="product-image" style=width:100px;height:125px;>
+            </div>
+            <p class="price">$19.99</p>
+          </div>          
         </div>
+
       </div> <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="mhn.jpg">
-            <img src="mhn.jpg" alt="Manchurian Hakka Noodles" style=width:100px;height:125px;>
-          </a>
           <div class="desc"id="fmenu">Manchow Hakka Noodles</div>
+          <div class="product">
+            <div class="image-container">
+              <img src="mhn.jpg" alt="Product Image" class="product-image" style=width:100px;height:125px;>
+            </div>
+          </div>  
+          <p class="price">$19.99</p>        
         </div>
       </div>
     </div>
 
-    <div id="sides" class="tabcontent">
+    <div id="sides" class="tabcontent" style="height: 409px;">
       <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="ch.jpg">
-            <img src="ch.jpg" alt="Chapati" style=width:100px;height:125px;>
-          </a>
           <div class="desc"id="fmenu">Chapati</div>
+          <div class="product">
+            <div class="image-container">
+              <img src="ch.jpg" alt="Product Image" class="product-image" style=width:100px;height:120px;>
+            </div>
+          </div>     
+          <p class="price">$19.99</p>     
         </div>
-      </div> <div class="responsive">
+      </div> 
+      
+      <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="ro.jpg">
-            <img src="ro.jpg" alt="Roti" style=width:100px;height:125px;>
-          </a>
           <div class="desc"id="fmenu">Roti</div>
+          <div class="product">
+            <div class="image-container">
+              <img src="ro.jpg" alt="Product Image" class="product-image" style=width:100px;height:125px;>
+            </div>
+            <p class="price">$19.99</p>
+          </div>          
         </div>
-      </div> <div class="responsive">
+      </div> 
+      
+      <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="na.jpg">
-            <img src="na.jpg" alt="Naan" style=width:100px;height:125px;>
-          </a>
           <div class="desc"id="fmenu">Naan</div>
+          <div class="product">
+            <div class="image-container">
+              <img src="na.jpg" alt="Product Image" class="product-image" style=width:100px;height:125px>
+            </div>
+            <p class="price">$19.99</p>
+          </div>          
         </div>
-      </div> <div class="responsive">
+      </div> 
+      
+      <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="pv.jpg">
-            <img src="pv.jpg" alt="Pav" style=width:100px;height:125px;>
-          </a>
           <div class="desc"id="fmenu">Pav</div>
+          <div class="product">
+            <div class="image-container">
+              <img src="pv.jpg" alt="Product Image" class="product-image" style=width:100px;height:125px;>
+            </div>
+            <p class="price">$19.99</p>
+          </div>          
         </div>
-      </div> <div class="responsive">
+      </div> 
+      
+      
+      
+      <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="lp.jpg">
-            <img src="lp.jpg" alt="Lachha paratha" style=width:100px;height:125px;>
-          </a>
-          <div class="desc"id="fmenu">Lachha paratha</div>
-        </div>
-      </div> <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="ku.jpg">
-            <img src="ku.jpg" alt="Kulcha" style=width:100px;height:125px;>
-          </a>
           <div class="desc"id="fmenu">Kulcha</div>
+          <div class="product">
+            <div class="image-container">
+              <img src="ku.jpg" alt="Product Image" class="product-image" style=width:100px;height:125px;>
+            </div>
+            <p class="price">$19.99</p>
+          </div>          
         </div>
-      </div> <div class="responsive">
+      </div> 
+      
+      <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="pd.jpg">
-            <img src="pd.jpg" alt="Papad" style=width:100px;height:125px;>
-          </a>
           <div class="desc"id="fmenu">papad</div>
+          <div class="product">
+            <div class="image-container">
+              <img src="pd.jpg" alt="Product Image" class="product-image" style=width:100px;height:118px;>
+            </div>
+          </div>     
+          <p class="price">$19.99</p>     
         </div>
-      </div> <div class="responsive">
+      </div> 
+      
+      <div class="responsive">
         <div class="gallery">
-          <a target="_blank" href="sd.jpg">
-            <img src="sd.jpg" alt="salad" style=width:100px;height:125px;>
-          </a>
           <div class="desc"id="fmenu">salad</div>
+          <div class="product">
+            <div class="image-container">
+              <img src="sd.jpg" alt="Product Image" class="product-image" style=width:100px;height:125px;>
+            </div>
+          </div>     
+          <p class="price">$19.99</p>     
         </div>
       </div>
-    </div>
-
-    <div id="beverages" class="tabcontent">
-      <h3>Mumbai</h3>
-      <p>Mumbai is the capital city of India.</p>
     </div>
   </div>
-  <div class="active" id="section3">
-    <h1>Order</h1>
+
+<div class="active" id="section5">
+  <div class="container">
+
+    <!-- row -->
+    <div class="form ">
+                    <h1>Reservation</h1>
+                    <h2>Book Your Table</h2>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input class="input" type="text" placeholder="Name" id="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input class="input" type="tel" placeholder="Phone" id="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date:</label>
+                        <input type="date" id="date">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input class="input" type="email" placeholder="Email" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="number">Number of Guests:</label>
+                        <select class="input" id="number">
+                            <option>1 Person</option>
+                            <option>2 People</option>
+                            <option>3 People</option>
+                            <option>4 People</option>
+                            <option>5 People</option>
+                            <option>6 People</option>
+                            <option>party</option>
+
+                        </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="time">Time:</label>
+                      <input type="time" id="time">
+                    </div>
+                </div>
+                <br>
+                <div class="book">
+                  <button class="book book1">Book table</button>
+                    </div>
+
+            </form>
+          </div>
+        </div>
+    </div>
   </div>
   <div class="active" id="section4">
     <h1>about us</h1>
+    <div  class="ab">
+      <div id="au">
+    <div class="col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1">
+      <div class="opening-time row">
+          <div class="section-header text-center">
+              <h2 class="title white-text">Opening Time</h2>
+          </div>
+          <ul>
+              <li>
+                  <h4 class="day">Sunday</h4>
+                  <h4 class="hours">8:00 am – 11:00 pm</h4>
+              </li>
+              <li>
+                  <h4 class="day">Monday</h4>
+                  <h4 class="hours">8:00 am – 11:00 pm</h4>
+              </li>
+              <li>
+                  <h4 class="day">Tuesday</h4>
+                  <h4 class="hours">8:00 am – 11:00 pm</h4>
+              </li>
+              <li>
+                  <h4 class="day">Wednesday</h4>
+                  <h4 class="hours">8:00 am – 11:00 pm</h4>
+              </li>
+              <li>
+                  <h4 class="day">Thursday</h4>
+                  <h4 class="hours">8:00 am – 11:00 pm</h4>
+              </li>
+              <li>
+                  <h4 class="day">Friday</h4>
+                  <h4 class="hours">Closed</h4>
+              </li>
+              <li>
+                  <h4 class="day">Saturday</h4>
+                  <h4 class="hours">Closed</h4>
+              </li>
+          </ul>
+          <div id="navbar2">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <a class="active" href="javascript:void(0)"><a href="#" class="fa fa-instagram" onclick="document.location= 'https://www.instagram.com'"></a></a>
+            <a href="javascript:void(0)"><a href="#" class="fa fa-facebook" onclick="document.location='https://www.facebook.com/'"></a></a>
+            <a href="javascript:void(0)"><a href="#" class="fa fa-twitter" onclick="document.location='https://twitter.com/home'"></a></a>
+        </div>
+      </div>
+  </div>
+</div>
+</div>
 </body>
 <script>
   window.onscroll = function() {myFunction()};
@@ -327,5 +575,26 @@ function openCity(evt, cityName) {
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
 </script>
+
 </html>
