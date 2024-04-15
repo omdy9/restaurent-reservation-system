@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sliding Homepage</title>
     <link rel="stylesheet" href="style2.css">
+    <title>Sliding Homepage</title>
 </head>
 <body>
     <div id="navbar">
@@ -12,6 +12,7 @@
         <a href="javascript:void(0)" onclick="document.location='#section2'">menu</a>
         <a href="javascript:void(0)" onclick="document.location='#section5'">Order</a>
         <a href="javascript:void(0)" onclick="document.location='#section4'">about Us</a>
+        <a href="javascript:void(0)" onclick="document.location='new.html'">log out</a>
     </div>
     
     <div class="content" id="section1">
@@ -447,30 +448,30 @@
     <div class="form ">
                     <h1>Reservation</h1>
                     <h2>Book Your Table</h2>
-
+                <form action="insert.php" method="post">
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="name">Name:</label>
-                        <input class="input" type="text" placeholder="Name" id="name">
+                        <input class="input" type="text" placeholder="Name" name="name">
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone:</label>
-                        <input class="input" type="tel" placeholder="Phone" id="phone">
+                        <input class="input" type="tel" placeholder="Phone" name="phone">
                     </div>
                     <div class="form-group">
                         <label for="date">Date:</label>
-                        <input type="date" id="date">
+                        <input type="date" name="date">
                     </div>
                 </div>
 
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="email">Email:</label>
-                        <input class="input" type="email" placeholder="Email" id="email">
+                        <input class="input" type="email" placeholder="Email" name="email">
                     </div>
                     <div class="form-group">
                         <label for="number">Number of Guests:</label>
-                        <select class="input" id="number">
+                        <select class="input" name="number">
                             <option>1 Person</option>
                             <option>2 People</option>
                             <option>3 People</option>
@@ -483,7 +484,7 @@
                     </div>
                     <div class="form-group">
                       <label for="time">Time:</label>
-                      <input type="time" id="time">
+                      <input type="time" name="time">
                     </div>
                 </div>
                 <br>
