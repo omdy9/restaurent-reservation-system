@@ -20,16 +20,21 @@
     </div>
     <div class="form-section">
         <div class="login-box">
-            <input type="email" class="email ele" placeholder="youremail@email.com">
-            <input type="password" class="password ele" placeholder="password">
-            <button class="clkbtn login-btn">Login</button>
-        </div>
+    <form action="login.php" method="post"><br>
+        <input type="email" class="email ele" name="email" placeholder="youremail@email.com"><br>
+        <input type="password" class="password ele" name="password" placeholder="password"><br>
+        <button type="submit" class="clkbtn login-btn">Login</button>
+    </form>
+</div>
+
         <div class="signup-box">
-            <input type="text" class="name ele" placeholder="Enter your name">
-            <input type="email" class="email ele" placeholder="youremail@email.com">
-            <input type="password" class="password ele" placeholder="password">
-            <input type="password" class="confirm-password ele" placeholder="Confirm password">
-            <button class="clkbtn signup-btn">Signup</button>
+            <form action="signup.php" method="post" novalidate>
+                <input type="text" class="name ele" name="name" placeholder="Enter your name"><br>
+                <input type="email" class="email ele" name="email" placeholder="youremail@email.com"><br>
+                <input type="password" class="password ele" name="password" placeholder="password"><br>
+                <input type="password" class="confirm-password ele" name="confirmPassword" placeholder="Confirm password"><br>
+                <button type="submit" class="clkbtn signup-btn">Signup</button>
+            </form>
         </div>
     </div>
     <div id="error-message" style="color: red;"></div>
@@ -38,69 +43,76 @@
 <script src="index.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        const loginBtn = document.querySelector('.login-btn');
-        const signupBtn = document.querySelector('.signup-btn');
+    const loginBtn = document.querySelector('.login-btn');
+    const signupBtn = document.querySelector('.signup-btn');
 
-        loginBtn.addEventListener('click', function () {
-            const email = document.querySelector('.login-box .email').value;
-            const password = document.querySelector('.login-box .password').value;
+    loginBtn.addEventListener('click', function () {
+        const email = document.querySelector('.login-box .email').value;
+        const password = document.querySelector('.login-box .password').value;
 
-            // Check if fields are not empty
-            if (email.trim() === '' || password.trim() === '') {
-                document.getElementById('error-message').textContent = 'Email and password are required';
-                return; // Prevent further execution
-            }
-
-            // Here, you would validate the login credentials.
-            const isValid = validateLogin(email, password);
-
-            if (isValid) {
-                // Redirect to home.html
-                window.location.href = 'home.html';
-            } else {
-                // Display error message
-                document.getElementById('error-message').textContent = 'Invalid login credentials';
-            }
-        });
-
-        signupBtn.addEventListener('click', function () {
-            const name = document.querySelector('.signup-box .name').value;
-            const email = document.querySelector('.signup-box .email').value;
-            const password = document.querySelector('.signup-box .password').value;
-            const confirmPassword = document.querySelector('.signup-box .confirm-password').value;
-
-            // Check if fields are not empty
-            if (name.trim() === '' || email.trim() === '' || password.trim() === '' || confirmPassword.trim() === '') {
-                document.getElementById('error-message').textContent = 'All fields are required';
-                return; // Prevent further execution
-            }
-
-            // Here, you would validate the signup credentials.
-            const isValid = validateSignup(name, email, password, confirmPassword);
-
-            if (isValid) {
-                // Redirect to home.html
-                window.location.href = 'home.html';
-            } else {
-                // Display error message
-                document.getElementById('error-message').textContent = 'Invalid signup information';
-            }
-        });
-
-        function validateLogin(email, password) {
-            // Validation logic for login
-            // Return true if valid, false otherwise
-            // Example: Check if email and password are not empty
-            return email.trim() !== '' && password.trim() !== '';
+        // Check if fields are not empty
+        if (email.trim() === '' || password.trim() === '') {
+            document.getElementById('error-message').textContent = 'Email and password are required';
+            return; // Prevent further execution
         }
 
-        function validateSignup(name, email, password, confirmPassword) {
-            // Validation logic for signup
-            // Return true if valid, false otherwise
-            // Example: Check if all fields are not empty and password matches confirmPassword
-            return name.trim() !== '' && email.trim() !== '' && password.trim() !== '' && password === confirmPassword;
+        // Validate login
+        const isValid = validateLogin(email, password);
+
+        if (isValid) {
+            // Check if it's admin
+            if (email.trim() === 'admin' && password.trim() === 'admin') {
+                // Redirect to admin.html
+                window.location.href = 'dbadmin.php';
+            } else {
+                // Redirect to home.html for regular users
+                window.location.href = 'home.html';
+            }
+        } else {
+            // Display error message
+            document.getElementById('error-message').textContent = 'Invalid login credentials';
         }
     });
+
+    signupBtn.addEventListener('click', function () {
+        const name = document.querySelector('.signup-box .name').value;
+        const email = document.querySelector('.signup-box .email').value;
+        const password = document.querySelector('.signup-box .password').value;
+        const confirmPassword = document.querySelector('.signup-box .confirm-password').value;
+
+        // Check if fields are not empty
+        if (name.trim() === '' || email.trim() === '' || password.trim() === '' || confirmPassword.trim() === '') {
+            document.getElementById('error-message').textContent = 'All fields are required';
+            return; // Prevent further execution
+        }
+
+        // Here, you would validate the signup credentials.
+        const isValid = validateSignup(name, email, password, confirmPassword);
+
+        if (isValid) {
+            // Redirect to home.html
+            window.location.href = 'home.html';
+        } else {
+            // Display error message
+            document.getElementById('error-message').textContent = 'Invalid signup information';
+        }
+    });
+
+    function validateLogin(email, password) {
+        // Validation logic for login
+        // Return true if valid, false otherwise
+        // Example: Check if email and password are not empty
+        return email.trim() !== '' && password.trim() !== '';
+    }
+
+    function validateSignup(name, email, password, confirmPassword) {
+        // Validation logic for signup
+        // Return true if valid, false otherwise
+        // Example: Check if all fields are not empty and password matches confirmPassword
+        return name.trim() !== '' && email.trim() !== '' && password.trim() !== '' && password === confirmPassword;
+    }
+});
+
 </script>
 
 </div>
